@@ -11,17 +11,8 @@ public class MainSet {
 		Random rnd = new Random();
 		
 		while (rndNums.size() < 5) {
-			int intToAdd = rnd.nextInt(13);
-			
-			if (intToAdd < 2 || intToAdd > 12) {
-				continue;
-			}
-			
-			if (rndNums.contains(intToAdd)) {
-				continue;
-			} else {
+			int intToAdd = rnd.nextInt(2, 13);
 				rndNums.add(intToAdd);
-			}
 		}
 		
 		System.out.println(rndNums);
