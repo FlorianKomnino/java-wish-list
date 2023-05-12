@@ -17,7 +17,7 @@ public class Main {
 			
 			int choice = sc.nextInt();
 			
-			while (choice<1 || choice>2) {
+			if (choice<1 || choice>2) {
 				System.out.println("Scelta non disponibile. Inserisci una scelta valida");
 				continue;
 			}
@@ -35,5 +35,6 @@ public class Main {
 		
 		System.out.println("Ecco la lista dei tuoi desideri");
 		System.out.println(wishList);
+		sc.close();
 	}
 }
