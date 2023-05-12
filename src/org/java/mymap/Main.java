@@ -30,14 +30,15 @@ public class Main {
 		System.out.println("---------------------");
 		System.out.println("Second part");
 		
-		String newStrTest = str.replaceAll("[^a-zA-Z ]", "");
-		String newStr = newStrTest.replaceAll("  ", " ");
+		String newStr = str.replaceAll("[^a-zA-Z ]", "");
 		
 		System.out.println(newStr);
 		
 		Map<String, Integer> occCounter2 = new HashMap<>();
 		
 		for (String c : newStr.split(" ")) {
+			
+			if (c.isBlank()) continue;
 			
 			if (occCounter2.containsKey(c)) {
 				
